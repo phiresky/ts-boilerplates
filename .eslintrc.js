@@ -12,6 +12,10 @@ module.exports = {
 	plugins: ["prettier", "@typescript-eslint"],
 	env: { es6: true, browser: true, node: true },
 	parser: "@typescript-eslint/parser",
+	parserOptions: {
+		tsconfigRootDir: __dirname,
+		project: ["./tsconfig.json"],
+	},
 	rules: {
 		"prettier/prettier": ["warn"],
 		"no-console": "off",
